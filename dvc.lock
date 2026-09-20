@@ -16,3 +16,27 @@ stages:
       hash: md5
       md5: ff4657c20f588b2114278f95e1e30f9b
       size: 27542545
+  prepare:
+    cmd: py src/prepare.py
+    deps:
+    - path: data/processed/clean.csv
+      hash: md5
+      md5: ff4657c20f588b2114278f95e1e30f9b
+      size: 27542545
+    - path: src/config.py
+      hash: md5
+      md5: 602953b8d9e3e24a1cae0f90d85ee10d
+      size: 1493
+    - path: src/prepare.py
+      hash: md5
+      md5: 5b19a9351cca3c26d3d2c38621ff2b73
+      size: 1371
+    outs:
+    - path: data/processed/test.csv
+      hash: md5
+      md5: 8375cb7b9a953b004dae096420f95bf3
+      size: 3921656
+    - path: data/processed/train.csv
+      hash: md5
+      md5: fd18d846fb22e726b3d324df627571ff
+      size: 15678876

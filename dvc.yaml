@@ -6,3 +6,12 @@ stages:
     - src/clean.py
     outs:
     - data/processed/clean.csv
+  prepare:
+    cmd: py src/prepare.py
+    deps:
+    - data/processed/clean.csv
+    - src/config.py
+    - src/prepare.py
+    outs:
+    - data/processed/test.csv
+    - data/processed/train.csv
