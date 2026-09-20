@@ -15,3 +15,13 @@ stages:
     outs:
     - data/processed/test.csv
     - data/processed/train.csv
+  train:
+    cmd: py src/train.py
+    deps:
+    - data/processed/test.csv
+    - data/processed/train.csv
+    - src/config.py
+    - src/train.py
+    metrics:
+    - reports/metrics.json:
+        cache: false

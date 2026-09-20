@@ -29,3 +29,13 @@ DROP_COLUMNS = {
 
 # Sensitive attributes: kept in the data for the fairness audit later.
 SENSITIVE_COLS = ["Gender", "age"]
+
+
+# Columns kept in train/test files but NOT given to the model as inputs.
+# Gender stays available for the fairness audit later.
+MODEL_EXCLUDE = ["Gender"]
+
+# Experiment tracking
+MLFLOW_DB = ROOT / "mlflow.db"          # MLflow stores run info in this small database file
+EXPERIMENT_NAME = "fairlend-baseline"
+METRICS_JSON = ROOT / "reports" / "metrics.json"
