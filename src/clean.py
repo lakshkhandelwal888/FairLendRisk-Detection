@@ -381,7 +381,7 @@ def main() -> None:
         "as NaN for the modeling pipeline to handle.")
 
     report = "\n".join(report_lines)
-    NOTES_MD.write_text(report + "\n")
+    NOTES_MD.write_text(report + "\n", encoding="utf-8")
     print(report)
 
 
