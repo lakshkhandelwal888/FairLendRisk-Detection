@@ -1,0 +1,8 @@
+stages:
+  clean:
+    cmd: py src/clean.py
+    deps:
+    - data/raw/Loan_Default.csv
+    - src/clean.py
+    outs:
+    - data/processed/clean.csv

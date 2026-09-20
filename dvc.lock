@@ -1,0 +1,18 @@
+schema: '2.0'
+stages:
+  clean:
+    cmd: py src/clean.py
+    deps:
+    - path: data/raw/Loan_Default.csv
+      hash: md5
+      md5: 83219ca562954e0f74eb8c9a48a81559
+      size: 28480484
+    - path: src/clean.py
+      hash: md5
+      md5: c40b25f9f23beaf339560472ba6cfe20
+      size: 16759
+    outs:
+    - path: data/processed/clean.csv
+      hash: md5
+      md5: ff4657c20f588b2114278f95e1e30f9b
+      size: 27542545
